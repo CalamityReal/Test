@@ -37,6 +37,37 @@ local TeleportSpeed = speed or 250
 local NextFrame = RunService.Heartbeat
 local Collected = 0
 
+local gui = Instance.new("ScreenGui")
+gui.Parent = Player.PlayerGui
+
+local startButton = Instance.new("TextButton")
+startButton.Name = "StartButton"
+startButton.Text = "Start TP"
+startButton.Position = UDim2.new(0.5, -75, 0.9, -20)
+startButton.Size = UDim2.new(0, 150, 0, 40)
+startButton.Parent = gui
+
+local stopButton = Instance.new("TextButton")
+stopButton.Name = "StopButton"
+stopButton.Text = "Stop TP"
+stopButton.Position = UDim2.new(0.5, -75, 0.9, -20)
+stopButton.Size = UDim2.new(0, 150, 0, 40)
+stopButton.Parent = gui
+
+-- Event handler for Start button
+startButton.MouseButton1Click:Connect(function()
+    getgenv().TP = true
+    startButton.Visible = false
+    stopButton.Visible = true
+end)
+
+-- Event handler for Stop button
+stopButton.MouseButton1Click:Connect(function()
+    getgenv().TP = false
+    stopButton.Visible = false
+    startButton.Visible = true
+end)
+
 local function fireproximityprompt(ProximityPrompt, Amount, Skip)
     assert(ProximityPrompt, "Argument #1 Missing or nil")
     assert(typeof(ProximityPrompt) == "Instance" and ProximityPrompt:IsA("ProximityPrompt"), "Attempted to fire a Value that is not a ProximityPrompt")
