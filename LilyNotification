@@ -25,7 +25,7 @@ game.Players.PlayerRemoving:Connect(function(player)
         autoload()
     end
 end)
-
+    
 local RunService = game:GetService("RunService")
 local Players = game:GetService("Players")
 local UserInputService = game:GetService("UserInputService")
@@ -53,6 +53,14 @@ stopButton.Text = "Stop TP"
 stopButton.Position = UDim2.new(0.5, -75, 0.9, -20)
 stopButton.Size = UDim2.new(0, 150, 0, 40)
 stopButton.Parent = gui
+
+local flowerCountLabel = Instance.new("TextLabel")
+flowerCountLabel.Name = "FlowerCountLabel"
+flowerCountLabel.Text = "Flower Count: 0"
+flowerCountLabel.Position = UDim2.new(0.6, -75, 0.9, -20)
+flowerCountLabel.Size = UDim2.new(0, 150, 0, 20)
+flowerCountLabel.TextSize = 18
+flowerCountLabel.Parent = gui
 
 -- Event handler for Start button
 startButton.MouseButton1Click:Connect(function()
