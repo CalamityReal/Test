@@ -1,12 +1,3 @@
-local function showNotification(text)
-    game.StarterGui:SetCore("SendNotification", {
-        Title = "Flower Collected";
-        Text = text;
-        Icon = "";
-        Duration = 3;
-    })
-end
-
 function autoload()
     pcall(function()
         local exec = tostring(identifyexecutor())
@@ -146,7 +137,6 @@ end
 
 local function collectFlower()
     Collected = Collected + 1
-    showNotification("Flower Collected: " .. Collected)
     updateFlowerCount(Collected)
 end
 
