@@ -56,7 +56,7 @@ stopButton.Parent = gui
 
 local flowerCountLabel = Instance.new("TextLabel")
 flowerCountLabel.Name = "FlowerCountLabel"
-flowerCountLabel.Text = "Flower Count: 0"
+flowerCountLabel.Text = "Flower Count: "..Collected
 flowerCountLabel.Position = UDim2.new(0.6, -75, 0.9, -20)
 flowerCountLabel.Size = UDim2.new(0, 150, 0, 20)
 flowerCountLabel.TextSize = 18
