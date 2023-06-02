@@ -1,3 +1,12 @@
+local function showNotification(text)
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Flower Collected";
+        Text = text;
+        Icon = "";
+        Duration = 3;
+    })
+end
+
 function autoload()
     pcall(function()
         local exec = tostring(identifyexecutor())
@@ -45,23 +54,25 @@ stopButton.Position = UDim2.new(0.5, -75, 0.9, -20)
 stopButton.Size = UDim2.new(0, 150, 0, 40)
 stopButton.Parent = gui
 
-local flowerCountLabel = Instance.new("TextLabel")
+local flowerCountLabel = Instance.new("TextButton")
 flowerCountLabel.Name = "FlowerCountLabel"
-flowerCountLabel.Text = "Flower Count: "..Collected
+flowerCountLabel.Text = "Show Collected Flower"
 flowerCountLabel.Position = UDim2.new(0.6, -75, 0.9, -20)
 flowerCountLabel.Size = UDim2.new(0, 150, 0, 20)
 flowerCountLabel.TextSize = 18
 flowerCountLabel.Parent = gui
 
-local function updateFlowerCount(count)
-    flowerCountLabel.Text = "Flower Count: " .. count
-end
+
 
 -- Event handler for Start button
 startButton.MouseButton1Click:Connect(function()
     getgenv().TP = true
     startButton.Visible = false
     stopButton.Visible = true
+end)
+
+flowerCountLabel.MouseButton1Click:Connect(function()
+    showNotification("Flowers Collected: " .. Collected)
 end)
 
 -- Event handler for Stop button
