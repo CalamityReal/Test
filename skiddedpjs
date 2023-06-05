@@ -295,8 +295,8 @@ end
 
 if game.PlaceId == 6152116144 then
 
-    local fin = loadstring(game:HttpGet("https://raw.githubusercontent.com/DenizAf4can/FinityV2/main/FinityV2"))()
-    local fm = fin.new("verydark","TRXDENT", false)
+    local fin = loadstring(game:HttpGet("https://raw.githubusercontent.com/CalamityReal/Test/main/skid"))()
+    local fm = fin.new("verydark","notmyfalut", false)
     local mainc = fm:Category("Map 1")
     local ausc = fm:Category("Auto Skill")
     local mains = mainc:Sector("Main")
@@ -786,7 +786,7 @@ end
 -- Map 2
 if game.PlaceId == 11468159863 then
 
-    local fin = loadstring(game:HttpGet("https://raw.githubusercontent.com/DenizAf4can/FinityV2/main/FinityV2"))()
+    local fin = loadstring(game:HttpGet("https://raw.githubusercontent.com/CalamityReal/Test/main/skid"))()
     local fm = fin.new("verydark","TRXDENT", false)
     local mainc = fm:Category("Map 2")
     local autosc = fm:Category("Auto Skill")
@@ -1209,7 +1209,7 @@ if game.PlaceId == 11468075017 then
         "WisteriaPoisoning"
     }
 
-    local fin = loadstring(game:HttpGet("https://raw.githubusercontent.com/DenizAf4can/FinityV2/main/FinityV2"))()
+    local fin = loadstring(game:HttpGet("https://raw.githubusercontent.com/CalamityReal/Test/main/skid"))()
     local fm = fin.new("verydark","TRXDENT", false)
     local mainc = fm:Category("Ouwigahara")
     local autosc = fm:Category("Auto Skill")
