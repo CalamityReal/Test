@@ -440,7 +440,7 @@ function finity.new(themename, gprojectName, thinProject)
 	local theme = finity.dark_theme
 	local projectName = false
 	local thinMenu = false
-	local toggledKey = Enum.KeyCode.LeftShift
+	local toggledKey = Enum.KeyCode.Insert
 	
     if string.lower(themename) == "light" then theme = finity.light_theme end
 	if string.lower(themename) == "dark" then theme = finity.dark_theme end
@@ -460,14 +460,14 @@ function finity.new(themename, gprojectName, thinProject)
 	local finityData
 	finityData = {
 		UpConnection = nil,
-		ToggleKey = Enum.KeyCode.LeftShift,
+		ToggleKey = Enum.KeyCode.Insert,
 	}
 
 	self2.ChangeToggleKey = function(NewKey)
 		finityData.ToggleKey = NewKey
 		
 		if not projectName then
-			self2.tip.Text = "Press ' LeftShift ' to hide this menu"
+			self2.tip.Text = "Press ' Insert ' to hide this menu"
 		end
 		
 		if finityData.UpConnection then
