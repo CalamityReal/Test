@@ -307,7 +307,7 @@ if game.PlaceId == 6152116144 then
 
     local fin = loadstring(game:HttpGet("https://raw.githubusercontent.com/CalamityReal/Test/main/skid"))()
     local fm = fin.new("verydark","TRXDENT", false)
-    local mainc = fm:Category("Map 1")h
+    local mainc = fm:Category("Map 1")
     local ausc = fm:Category("Auto Skill")
     local mains = mainc:Sector("Main")
     local bsl = mainc:Sector("Blue Spider Lily")
